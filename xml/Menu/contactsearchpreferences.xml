@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<menu>
+  <item>
+    <path>civicrm/searchpreferences/settings</path>
+    <page_callback>CRM_Contactsearchpreferences_Form_Settings</page_callback>
+    <title>Advance Search Preferences</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+</menu>
