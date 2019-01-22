@@ -142,7 +142,7 @@ class CRM_Contactsearchpreferences_Form_Settings extends CRM_Core_Form {
     return array(
       'CRM_Contact_Form_Relationship' => 'CRM_Contact_Form_Relationship',
       'CRM_Activity_Form_Activity'    => 'CRM_Activity_Form_Activity',
-      'CRM_Contatct_Search_QuickForm' => 'CRM_Contatct_Search_QuickForm',
+      'CRM_Contact_Search_QuickForm' => 'CRM_Contact_Search_QuickForm',
       'CRM_Case_Form_ActivityToCase'  => 'CRM_Case_Form_ActivityToCase',
       'CRM_Case_Form_AddToCaseAsRole' => 'CRM_Case_Form_AddToCaseAsRole',
       'CRM_Contribute_Form_Contribution' => 'CRM_Contribute_Form_Contribution',

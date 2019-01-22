@@ -5,7 +5,7 @@ class CRM_Contactsearchpreferences_APIWrapperGetQuick implements API_Wrapper {
    * Alter the parameters of the api request
    */
   public function fromApiInput($apiRequest) {
-    $formName = 'CRM_Contatct_Search_QuickForm';
+    $formName = 'CRM_Contact_Search_QuickForm';
     $wildcardForms = Civi::settings()->get('contactsearchpreferences_remove_automatic_wildcard');
     $emailForms = Civi::settings()->get('contactsearchpreferences_dont_include_email');
 
@@ -30,7 +30,7 @@ class CRM_Contactsearchpreferences_APIWrapperGetQuick implements API_Wrapper {
    */
   public function toApiOutput($apiRequest, $result) {
 
-    $formName = 'CRM_Contatct_Search_QuickForm';
+    $formName = 'CRM_Contact_Search_QuickForm';
     $wildcardForms = Civi::settings()->get('contactsearchpreferences_remove_automatic_wildcard');
     $emailForms = Civi::settings()->get('contactsearchpreferences_dont_include_email');
 
