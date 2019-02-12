@@ -141,31 +141,15 @@ function contactsearchpreferences_civicrm_entityTypes(&$entityTypes) {
  *
  */
 function contactsearchpreferences_civicrm_navigationMenu(&$menu) {
-  $maxID = CRM_Core_DAO::singleValueQuery("SELECT max(id) FROM civicrm_navigation");
-  $navId = $maxID + 1;
-
-  $administerMenuId = CRM_Core_DAO::getFieldValue('CRM_Core_BAO_Navigation', 'Administer', 'id', 'name');
-  $parentID = !empty($administerMenuId) ? $administerMenuId : NULL;
-
-  $navigationMenu = array(
-    'attributes' => array(
-      'label' => 'Advance Search Preferences',
-      'name' => 'AdvanceSearchPreferences',
-      'url' => 'civicrm/searchpreferences/settings',
-      'permission' => 'administer CiviCRM',
-      'operator' => NULL,
-      'separator' => NULL,
-      'parentID' => $parentID,
-      'active' => 1,
-      'navID' => $navId,
-    ),
-  );
-  if ($parentID) {
-    $menu[$parentID]['child'][$navId] = $navigationMenu;
-  }
-  else {
-    $menu[$navId] = $navigationMenu;
-  }
+  _contactsearchpreferences_civix_insert_navigation_menu($menu, 'Administer', array(
+    'label' => E::ts('Advanced Search Preferences'),
+    'name' => 'AdvancedSearchPreferences',
+    'url' => 'civicrm/searchpreferences/settings',
+    'permission' => 'administer CiviCRM',
+    'operator' => 'OR',
+    'separator' => 0,
+  ));
+  _contactsearchpreferences_civix_navigationMenu($menu);
 }
 
 /**
